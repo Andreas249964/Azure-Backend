@@ -4,19 +4,19 @@ export const msalConfig = {
     auth: {
         clientId: "8f108d9d-29e7-4e68-908e-dd9d0eccea96",
         authority: "https://login.microsoftonline.com/e2c258ac-b73e-46cd-ab4b-e6718566501c",
-        //knownAuthorities: [],
-        //cloudDiscoveryMetadata: "",
+        knownAuthorities: [],
+        cloudDiscoveryMetadata: "",
         redirectUri: "http://localhost:3000/",
         postLogoutRedirectUri: "/",
         navigateToLoginRequestUrl: false,
-        //clientCapabilities: ["CP1"],
+        clientCapabilities: ["CP1"],
     },
     cache: {
         cacheLocation: "sessionStorage",
-        //temporaryCacheLocation: "sessionStorage",
+        temporaryCacheLocation: "sessionStorage",
         storeAuthStateInCookie: false,
-        //secureCookies: false,
-        //claimsBasedCachingEnabled: true,
+        secureCookies: false,
+        claimsBasedCachingEnabled: true,
     },
     system: {
         loggerOptions: {
@@ -57,5 +57,5 @@ export const msalConfig = {
 //const msalInstance = new PublicClientApplication(msalConfig);
 
 export const loginRequest = {
-    scopes: ["api://53452971-9b79-4046-87a6-1c499331a5fb"]
+    scopes: ["api://53452971-9b79-4046-87a6-1c499331a5fb/invoke"]
 }
